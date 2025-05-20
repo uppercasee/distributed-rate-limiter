@@ -78,7 +78,7 @@ func (h *GRPCHandler) HandleCheck(ctx context.Context, req *pb.CheckRequest) (*p
 		retryAfter = max(int32((windowSize-(now-oldestTs))/int64(time.Second)), 0)
 	}
 
-	// Basic response, always allowed (MVP)
+	// return false with retryAfter in seconds
 	return &pb.CheckResponse{
 		Allowed:    false,
 		RetryAfter: int64(retryAfter),
