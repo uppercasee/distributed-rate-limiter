@@ -1,0 +1,6 @@
+.git
+*.pb.go
+*.log
+*.md
+bin/
+dist/
