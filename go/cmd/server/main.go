@@ -24,7 +24,7 @@ func (s *server) Check(ctx context.Context, req *limiter.CheckRequest) (*limiter
 
 func main() {
 	// connect to redis before anything
-	redis.InitRedis()
+	redis_server.InitRedis()
 
 	// start a tcp connection for to listen for gRPC
 	listener, err := net.Listen("tcp", ":50051")
