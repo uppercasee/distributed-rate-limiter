@@ -57,6 +57,13 @@ func (h *GRPCHandler) HandleCheck(ctx context.Context, req *pb.CheckRequest) (*p
 			log.Println("ZAdd error:", err)
 		}
 
+		// add expiry of limit + 10seconds
+		ttl := time.Duration(windowSize+10) * time.Second
+		err = redis_server.RDB.Expire(ctx, key, ttl).Err()
+		if err != nil {
+			log.Printf("failed to set expiry on redis key: %v", err)
+		}
+
 		return &pb.CheckResponse{
 			Allowed:    true,
 			RetryAfter: 0,
