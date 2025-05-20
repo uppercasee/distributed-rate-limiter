@@ -12,4 +12,6 @@ EXPOSE 5174
 
 RUN npm run build
 
+RUN mkdir -p dist/proto && cp -r src/proto/* dist/proto/
+
 CMD [ "node", "dist/index.js" ]

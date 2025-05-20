@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package limiter;
+
+option go_package = "./pb";
+
+service RateLimiterService {
+  rpc Check(CheckRequest) returns (CheckResponse);
+}
+
+message CheckRequest {
+  string client_id = 1;
+}
+
+message CheckResponse {
+  bool allowed = 1;
+  int64 retry_after = 2; // seconds
+}

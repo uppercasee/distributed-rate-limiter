@@ -6,6 +6,7 @@ import helmet from "helmet";
 import compression from "compression";
 
 import dotenv from "dotenv";
+import { rateLimiterMiddleware } from "./middlewares/rateLimiter";
 dotenv.config();
 
 const port: number = 5174;
@@ -19,7 +20,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // middleware (Rate-Limiter)
-// app.use()
+app.use(rateLimiterMiddleware)
 
 app.use(API_PREFIX, api_routes);
 
