@@ -1,0 +1,21 @@
+services:
+  drls-server:
+    build:
+      context: ./go
+    ports:
+      - "50051:50051"
+    networks:
+      - drls-net
+
+  express-server:
+      build:
+        context: ./express
+      ports:
+        - "5174:5174"
+      depends_on:
+        - drls-server
+      networks:
+        - drls-net
+
+networks:
+  drls-net:
