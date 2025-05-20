@@ -1,9 +1,30 @@
 services:
-  drls-server:
+  redis:
+    image: redis:alpine
+    restart: always
+    container_name: redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+    volumes:
+      - redis_data:/data
+    networks:
+      - drls-net
+
+  grpc-server:
     build:
       context: ./go
     ports:
       - "50051:50051"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
     networks:
       - drls-net
 
@@ -13,9 +34,12 @@ services:
       ports:
         - "5174:5174"
       depends_on:
-        - drls-server
+        - grpc-server
       networks:
         - drls-net
 
 networks:
   drls-net:
+
+volumes:
+  redis_data:
