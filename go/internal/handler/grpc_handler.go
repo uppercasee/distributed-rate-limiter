@@ -20,7 +20,7 @@ func NewGRPCHandler() *GRPCHandler {
 
 // HandleCheck processes a rate limit check request.
 func (h *GRPCHandler) HandleCheck(ctx context.Context, req *pb.CheckRequest) (*pb.CheckResponse, error) {
-	limit := 5
+	limit := 200
 
 	log.Println("Handler received request for client:", req.ClientId)
 	// create redis key
