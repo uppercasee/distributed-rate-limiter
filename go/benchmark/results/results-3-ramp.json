@@ -1,0 +1,379 @@
+{
+  "clients": [
+    {
+      "client_id": "client-7",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 5,
+        "max": 103,
+        "avg": 62,
+        "p50": 60,
+        "p95": 100,
+        "p99": 103,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-13",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 18,
+        "max": 93,
+        "avg": 55,
+        "p50": 54,
+        "p95": 92,
+        "p99": 93,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-19",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 17,
+        "max": 96,
+        "avg": 53,
+        "p50": 51,
+        "p95": 89,
+        "p99": 93,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-21",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 17,
+        "max": 108,
+        "avg": 60,
+        "p50": 61,
+        "p95": 90,
+        "p99": 105,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-22",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 19,
+        "max": 105,
+        "avg": 57,
+        "p50": 56,
+        "p95": 90,
+        "p99": 102,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-5",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 18,
+        "max": 95,
+        "avg": 47,
+        "p50": 44,
+        "p95": 88,
+        "p99": 95,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-8",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 18,
+        "max": 107,
+        "avg": 61,
+        "p50": 57,
+        "p95": 100,
+        "p99": 107,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-11",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 17,
+        "max": 107,
+        "avg": 56,
+        "p50": 52,
+        "p95": 90,
+        "p99": 101,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-14",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 18,
+        "max": 105,
+        "avg": 53,
+        "p50": 47,
+        "p95": 100,
+        "p99": 103,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-18",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 18,
+        "max": 107,
+        "avg": 42,
+        "p50": 38,
+        "p95": 62,
+        "p99": 106,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-20",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 18,
+        "max": 95,
+        "avg": 51,
+        "p50": 50,
+        "p95": 81,
+        "p99": 95,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-23",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 23,
+        "max": 107,
+        "avg": 70,
+        "p50": 74,
+        "p95": 100,
+        "p99": 107,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-24",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 19,
+        "max": 108,
+        "avg": 73,
+        "p50": 78,
+        "p95": 103,
+        "p99": 107,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-2",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 12,
+        "max": 107,
+        "avg": 63,
+        "p50": 64,
+        "p95": 97,
+        "p99": 107,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-9",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 17,
+        "max": 106,
+        "avg": 60,
+        "p50": 59,
+        "p95": 100,
+        "p99": 101,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-10",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 20,
+        "max": 98,
+        "avg": 61,
+        "p50": 59,
+        "p95": 92,
+        "p99": 98,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-15",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 17,
+        "max": 105,
+        "avg": 51,
+        "p50": 48,
+        "p95": 85,
+        "p99": 101,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-16",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 17,
+        "max": 69,
+        "avg": 39,
+        "p50": 40,
+        "p95": 60,
+        "p99": 67,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-3",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 13,
+        "max": 102,
+        "avg": 55,
+        "p50": 55,
+        "p95": 91,
+        "p99": 98,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-4",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 5,
+        "max": 102,
+        "avg": 51,
+        "p50": 45,
+        "p95": 91,
+        "p99": 97,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-6",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 20,
+        "max": 98,
+        "avg": 64,
+        "p50": 66,
+        "p95": 91,
+        "p99": 93,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-12",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 17,
+        "max": 94,
+        "avg": 48,
+        "p50": 46,
+        "p95": 80,
+        "p99": 92,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-17",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 109,
+        "avg": 52,
+        "p50": 51,
+        "p95": 97,
+        "p99": 103,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-0",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 19,
+        "max": 108,
+        "avg": 62,
+        "p50": 58,
+        "p95": 94,
+        "p99": 107,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-1",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 22,
+        "max": 108,
+        "avg": 59,
+        "p50": 58,
+        "p95": 91,
+        "p99": 106,
+        "count": 105
+      }
+    }
+  ]
+}
