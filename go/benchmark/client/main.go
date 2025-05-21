@@ -172,7 +172,7 @@ func main() {
 		results.Clients = append(results.Clients, *stats)
 	}
 
-	outputPath := "benchmark/results/result.json"
+	outputPath := fmt.Sprintf("benchmark/results/results-%s.json", cfg.Pattern)
 	os.MkdirAll("benchmark/results", os.ModePerm)
 	file, err := os.Create(outputPath)
 	if err != nil {
