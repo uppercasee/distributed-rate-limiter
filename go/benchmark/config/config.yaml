@@ -2,7 +2,7 @@ clients: 25
 rps_per_client: 10
 duration_seconds: 30
 grpc_target: "localhost:8080"
-pattern: "ramp"  # "steady", "burst", "ramp"
+pattern: "steady"  # "steady", "burst", "ramp"
 
 burst:
   size_multiplier: 2         # burstSize = rps_per_client * size_multiplier

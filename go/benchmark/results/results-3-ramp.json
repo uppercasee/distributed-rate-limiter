@@ -1,17 +1,122 @@
 {
   "clients": [
     {
-      "client_id": "client-10",
+      "client_id": "client-0",
       "allowed": 105,
       "denied": 0,
       "errors": 0,
       "latency_stats": {
-        "min": 17,
-        "max": 93,
-        "avg": 49,
+        "min": 10,
+        "max": 54,
+        "avg": 30,
+        "p50": 26,
+        "p95": 53,
+        "p99": 54,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-1",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 60,
+        "avg": 38,
         "p50": 38,
-        "p95": 88,
-        "p99": 93,
+        "p95": 58,
+        "p99": 60,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-3",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 12,
+        "max": 54,
+        "avg": 30,
+        "p50": 27,
+        "p95": 53,
+        "p99": 54,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-4",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 12,
+        "max": 58,
+        "avg": 36,
+        "p50": 33,
+        "p95": 54,
+        "p99": 55,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-6",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 13,
+        "max": 58,
+        "avg": 34,
+        "p50": 32,
+        "p95": 55,
+        "p99": 57,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-19",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 13,
+        "max": 60,
+        "avg": 41,
+        "p50": 46,
+        "p95": 56,
+        "p99": 59,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-22",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 58,
+        "avg": 29,
+        "p50": 24,
+        "p95": 54,
+        "p99": 56,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-7",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 54,
+        "avg": 31,
+        "p50": 29,
+        "p95": 53,
+        "p99": 54,
         "count": 105
       }
     },
@@ -21,12 +126,27 @@
       "denied": 0,
       "errors": 0,
       "latency_stats": {
-        "min": 16,
-        "max": 115,
-        "avg": 54,
-        "p50": 48,
-        "p95": 88,
-        "p99": 96,
+        "min": 10,
+        "max": 58,
+        "avg": 35,
+        "p50": 33,
+        "p95": 55,
+        "p99": 58,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-14",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 12,
+        "max": 60,
+        "avg": 37,
+        "p50": 34,
+        "p95": 56,
+        "p99": 59,
         "count": 105
       }
     },
@@ -36,12 +156,42 @@
       "denied": 0,
       "errors": 0,
       "latency_stats": {
-        "min": 16,
-        "max": 95,
-        "avg": 50,
-        "p50": 40,
-        "p95": 91,
-        "p99": 95,
+        "min": 12,
+        "max": 56,
+        "avg": 33,
+        "p50": 31,
+        "p95": 53,
+        "p99": 55,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-16",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 56,
+        "avg": 32,
+        "p50": 27,
+        "p95": 54,
+        "p99": 56,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-17",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 57,
+        "avg": 29,
+        "p50": 28,
+        "p95": 51,
+        "p99": 54,
         "count": 105
       }
     },
@@ -51,12 +201,57 @@
       "denied": 0,
       "errors": 0,
       "latency_stats": {
-        "min": 13,
-        "max": 113,
-        "avg": 67,
-        "p50": 76,
-        "p95": 95,
-        "p99": 113,
+        "min": 10,
+        "max": 54,
+        "avg": 29,
+        "p50": 27,
+        "p95": 53,
+        "p99": 54,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-8",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 54,
+        "avg": 30,
+        "p50": 29,
+        "p95": 53,
+        "p99": 54,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-13",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 12,
+        "max": 59,
+        "avg": 29,
+        "p50": 24,
+        "p95": 54,
+        "p99": 58,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-18",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 58,
+        "avg": 35,
+        "p50": 38,
+        "p95": 55,
+        "p99": 57,
         "count": 105
       }
     },
@@ -67,161 +262,11 @@
       "errors": 0,
       "latency_stats": {
         "min": 13,
-        "max": 113,
-        "avg": 67,
-        "p50": 73,
-        "p95": 105,
-        "p99": 113,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-1",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 16,
-        "max": 98,
-        "avg": 55,
-        "p50": 44,
-        "p95": 90,
-        "p99": 94,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-6",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 19,
-        "max": 110,
-        "avg": 53,
-        "p50": 43,
-        "p95": 95,
-        "p99": 110,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-7",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 12,
-        "max": 113,
-        "avg": 54,
-        "p50": 43,
-        "p95": 101,
-        "p99": 108,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-8",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 15,
-        "max": 113,
-        "avg": 50,
-        "p50": 39,
-        "p95": 96,
-        "p99": 108,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-13",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 13,
-        "max": 113,
-        "avg": 51,
-        "p50": 42,
-        "p95": 95,
-        "p99": 113,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-19",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 17,
-        "max": 113,
-        "avg": 64,
-        "p50": 66,
-        "p95": 94,
-        "p99": 108,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-20",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 20,
-        "max": 108,
-        "avg": 63,
-        "p50": 68,
-        "p95": 95,
-        "p99": 106,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-24",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 13,
-        "max": 115,
-        "avg": 58,
-        "p50": 60,
-        "p95": 97,
-        "p99": 115,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-12",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 12,
-        "max": 82,
-        "avg": 45,
-        "p50": 40,
-        "p95": 79,
-        "p99": 82,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-0",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 16,
-        "max": 110,
-        "avg": 65,
-        "p50": 73,
-        "p95": 97,
-        "p99": 110,
+        "max": 59,
+        "avg": 32,
+        "p50": 30,
+        "p95": 53,
+        "p99": 57,
         "count": 105
       }
     },
@@ -231,42 +276,12 @@
       "denied": 0,
       "errors": 0,
       "latency_stats": {
-        "min": 19,
-        "max": 113,
-        "avg": 58,
-        "p50": 53,
-        "p95": 99,
-        "p99": 113,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-3",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 20,
-        "max": 115,
-        "avg": 52,
+        "min": 12,
+        "max": 60,
+        "avg": 38,
         "p50": 44,
-        "p95": 94,
-        "p99": 103,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-4",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 20,
-        "max": 115,
-        "avg": 48,
-        "p50": 39,
-        "p95": 94,
-        "p99": 104,
+        "p95": 56,
+        "p99": 59,
         "count": 105
       }
     },
@@ -277,86 +292,11 @@
       "errors": 0,
       "latency_stats": {
         "min": 14,
-        "max": 97,
-        "avg": 52,
+        "max": 59,
+        "avg": 39,
         "p50": 44,
-        "p95": 94,
-        "p99": 97,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-14",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 13,
-        "max": 86,
-        "avg": 41,
-        "p50": 38,
-        "p95": 73,
-        "p99": 85,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-18",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 19,
-        "max": 96,
-        "avg": 51,
-        "p50": 45,
-        "p95": 85,
-        "p99": 94,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-16",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 22,
-        "max": 96,
-        "avg": 57,
-        "p50": 56,
-        "p95": 88,
-        "p99": 95,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-17",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 18,
-        "max": 93,
-        "avg": 51,
-        "p50": 45,
-        "p95": 86,
-        "p99": 93,
-        "count": 105
-      }
-    },
-    {
-      "client_id": "client-22",
-      "allowed": 105,
-      "denied": 0,
-      "errors": 0,
-      "latency_stats": {
-        "min": 13,
-        "max": 85,
-        "avg": 46,
-        "p50": 40,
-        "p95": 78,
-        "p99": 84,
+        "p95": 55,
+        "p99": 58,
         "count": 105
       }
     },
@@ -366,12 +306,72 @@
       "denied": 0,
       "errors": 0,
       "latency_stats": {
-        "min": 12,
-        "max": 97,
-        "avg": 53,
-        "p50": 43,
-        "p95": 90,
-        "p99": 97,
+        "min": 11,
+        "max": 57,
+        "avg": 33,
+        "p50": 32,
+        "p95": 54,
+        "p99": 57,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-10",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 60,
+        "avg": 38,
+        "p50": 44,
+        "p95": 57,
+        "p99": 58,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-12",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 59,
+        "avg": 39,
+        "p50": 40,
+        "p95": 56,
+        "p99": 58,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-20",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 13,
+        "max": 56,
+        "avg": 39,
+        "p50": 44,
+        "p95": 55,
+        "p99": 56,
+        "count": 105
+      }
+    },
+    {
+      "client_id": "client-24",
+      "allowed": 105,
+      "denied": 0,
+      "errors": 0,
+      "latency_stats": {
+        "min": 10,
+        "max": 59,
+        "avg": 32,
+        "p50": 28,
+        "p95": 56,
+        "p99": 58,
         "count": 105
       }
     }
