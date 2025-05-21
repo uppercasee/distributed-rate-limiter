@@ -1,0 +1,13 @@
+clients: 10
+rps_per_client: 5
+duration_seconds: 60
+grpc_target: "localhost:50051"
+pattern: "steady"  # "steady", "burst", "ramp"
+
+burst:
+  size_multiplier: 2         # burstSize = rps_per_client * size_multiplier
+  interval_ms: 2000          # interval between bursts (in milliseconds)
+
+ramp:
+  step: 1                    # how many RPS to increase per interval
+  interval_ms: 2000          # time between RPS increases (in milliseconds)

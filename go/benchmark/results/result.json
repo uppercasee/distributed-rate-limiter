@@ -1,0 +1,154 @@
+{
+  "clients": [
+    {
+      "client_id": "client-0",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 903168,
+        "max": 15990783,
+        "avg": 2504819,
+        "p50": 2418687,
+        "p95": 3487743,
+        "p99": 3946495,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-2",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 783872,
+        "max": 16080895,
+        "avg": 2465905,
+        "p50": 2379775,
+        "p95": 3323903,
+        "p99": 3799039,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-5",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 868864,
+        "max": 15917055,
+        "avg": 2496350,
+        "p50": 2435071,
+        "p95": 3583999,
+        "p99": 4341759,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-8",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 877568,
+        "max": 15925247,
+        "avg": 2478887,
+        "p50": 2406399,
+        "p95": 3442687,
+        "p99": 4114431,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-9",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 837632,
+        "max": 15302655,
+        "avg": 2466682,
+        "p50": 2396159,
+        "p95": 3373055,
+        "p99": 4136959,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-1",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 873984,
+        "max": 16097279,
+        "avg": 2513544,
+        "p50": 2455551,
+        "p95": 3518463,
+        "p99": 3799039,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-3",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 871936,
+        "max": 15908863,
+        "avg": 2470836,
+        "p50": 2390015,
+        "p95": 3411967,
+        "p99": 3794943,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-4",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 778752,
+        "max": 15712255,
+        "avg": 2482111,
+        "p50": 2408447,
+        "p95": 3477503,
+        "p99": 4272127,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-6",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 893952,
+        "max": 15917055,
+        "avg": 2475980,
+        "p50": 2416639,
+        "p95": 3391487,
+        "p99": 4235263,
+        "count": 299
+      }
+    },
+    {
+      "client_id": "client-7",
+      "allowed": 5,
+      "denied": 294,
+      "errors": 0,
+      "latency_stats": {
+        "min": 861696,
+        "max": 15900671,
+        "avg": 2464161,
+        "p50": 2371583,
+        "p95": 3424255,
+        "p99": 4020223,
+        "count": 299
+      }
+    }
+  ]
+}
