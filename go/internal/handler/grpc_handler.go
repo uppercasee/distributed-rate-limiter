@@ -7,7 +7,6 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/redis/go-redis/v9"
 	"github.com/uppercasee/drls/internal/redis"
 	"github.com/uppercasee/drls/pb"
 )
@@ -18,76 +17,75 @@ func NewGRPCHandler() *GRPCHandler {
 	return &GRPCHandler{}
 }
 
-// HandleCheck processes a rate limit check request.
 func (h *GRPCHandler) HandleCheck(ctx context.Context, req *pb.CheckRequest) (*pb.CheckResponse, error) {
 	limit := 200
-
-	log.Println("Handler received request for client:", req.ClientId)
-	// create redis key
-	key := fmt.Sprintf("rate_limit:%s", req.ClientId)
-	log.Println("key: ", key)
-
-	// remove outdated entries older than the window
-	now := time.Now().UnixNano()
 	windowSize := int64(60) * int64(time.Second)
+	ttl := int64(210) // window + 10s
+	now := time.Now().UnixNano()
 	threshold := now - windowSize
 
-	removed, err := redis_server.RDB.ZRemRangeByScore(ctx, key, "-inf", fmt.Sprintf("%v", threshold)).Result()
+	key := fmt.Sprintf("rate_limit:%s", req.ClientId)
+	log.Println("Handler received request for client:", req.ClientId)
+	log.Println("Redis key:", key)
 
-	log.Println("number of removed entries: ", removed)
+	// -- KEYS[1] = rate limit key
+	// -- ARGV[1] = current timestamp (in nanoseconds)
+	// -- ARGV[2] = threshold timestamp (oldest valid timestamp)
+	// -- ARGV[3] = rate limit count
+	// -- ARGV[4] = TTL for the key (in seconds)
+	script := `
+	redis.call('ZREMRANGEBYSCORE', KEYS[1], '-inf', ARGV[2])
+	local count = redis.call('ZCARD', KEYS[1])
+	if tonumber(count) < tonumber(ARGV[3]) then
+		redis.call('ZADD', KEYS[1], ARGV[1], ARGV[1])
+		redis.call('EXPIRE', KEYS[1], tonumber(ARGV[4]))
+		return {1, 0}
+	else
+		local oldest = redis.call('ZRANGE', KEYS[1], 0, 0)[1]
+		return {0, oldest}
+	end
+	`
+
+	res, err := redis_server.RDB.Eval(ctx, script, []string{key},
+		now,
+		threshold,
+		limit,
+		ttl,
+	).Result()
+
 	if err != nil {
-		log.Printf("failed to remove outdated entries: %v", err)
+		log.Printf("Lua script execution error: %v", err)
+		return nil, err
 	}
 
-	// count entries in the window
-	count, err := redis_server.RDB.ZCard(ctx, key).Result()
-	log.Println("number of entries: ", count)
-	if err != nil {
-		log.Printf("failed to count the entries: %v", err)
+	result, ok := res.([]interface{})
+	if !ok || len(result) != 2 {
+		log.Printf("Unexpected Lua script result: %+v", res)
+		return nil, fmt.Errorf("invalid script result")
 	}
 
-	// decision
-	if count < int64(limit) {
-		_, err := redis_server.RDB.ZAdd(ctx, key, redis.Z{
-			Score:  float64(now),
-			Member: now,
-		}).Result()
+	allowed, _ := result[0].(int64)
 
-		if err != nil {
-			log.Println("ZAdd error:", err)
-		}
-
-		// add expiry of limit + 10seconds
-		ttl := time.Duration(windowSize+10) * time.Second
-		err = redis_server.RDB.Expire(ctx, key, ttl).Err()
-		if err != nil {
-			log.Printf("failed to set expiry on redis key: %v", err)
-		}
-
+	if allowed == 1 {
 		return &pb.CheckResponse{
 			Allowed:    true,
 			RetryAfter: 0,
 		}, nil
 	}
 
-	// get the oldest entry
-	oldest, err := redis_server.RDB.ZRange(ctx, key, 0, 0).Result()
+	oldestStr, _ := result[1].(string)
+	oldestTs, _ := strconv.ParseInt(oldestStr, 10, 64)
+	retryAfter := max(int32((windowSize-(now-oldestTs))/int64(time.Second)), 0)
 
-	log.Println("the oldest entry: ", oldest)
-	if err != nil {
-		log.Printf("failed to get the oldest entry: %v", err)
-	}
-
-	// calculate retry after
-	retryAfter := int32(0)
-	if len(oldest) > 0 {
-		oldestTs, _ := strconv.ParseInt(oldest[0], 10, 64)
-		retryAfter = max(int32((windowSize-(now-oldestTs))/int64(time.Second)), 0)
-	}
-
-	// return false with retryAfter in seconds
 	return &pb.CheckResponse{
 		Allowed:    false,
 		RetryAfter: int64(retryAfter),
 	}, nil
+}
+
+func max(a, b int32) int32 {
+	if a > b {
+		return a
+	}
+	return b
 }
