@@ -28,3 +28,10 @@ The sliding window algorithm used by DRLS avoids the abrupt resets that can occu
 
 This provides more accurate enforcement and fairness, and helps smooth out spikes in traffic that could otherwise be allowed under a fixed window model.
 
+## 🚧 TODO / Future Improvements
+
+- 🔒 Use **Redis Lua scripts** for atomic request handling to prevent race conditions.
+- 🧩 Add support for **Redis Cluster / sharding** for better scalability and fault tolerance.
+- 📊 Integrate **Prometheus metrics exporter** for observability and performance monitoring.
+- 🔄 Add **configurable rate limit policies** per client or API key.
+- ☁️ Support **graceful Redis failover** and connection retry logic for high availability.
