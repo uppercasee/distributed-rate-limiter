@@ -21,8 +21,8 @@ func TestHandleCheck(t *testing.T) {
 
 	h := handler.NewGRPCHandler()
 
-	// Send requests within the limit (5)
-	for range 5 {
+	// Send requests within the limit (200)
+	for range 200 {
 		resp, err := h.HandleCheck(ctx, &pb.CheckRequest{ClientId: clientID})
 		assert.NoError(t, err)
 		assert.True(t, resp.Allowed)
