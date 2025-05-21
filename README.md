@@ -30,7 +30,7 @@ This provides more accurate enforcement and fairness, and helps smooth out spike
 
 ## 🚧 TODO / Future Improvements
 
-- 🔒 Use **Redis Lua scripts** for atomic request handling to prevent race conditions.
+- ~~🔒 Use **Redis Lua scripts** for atomic request handling to prevent race conditions.~~
 - 🧩 Add support for **Redis Cluster / sharding** for better scalability and fault tolerance.
 - 📊 Integrate **Prometheus metrics exporter** for observability and performance monitoring.
 - 🔄 Add **configurable rate limit policies** per client or API key.
