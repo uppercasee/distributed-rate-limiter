@@ -28,6 +28,19 @@ services:
     networks:
       - drls-net
 
+  grpc-test:
+    build:
+      context: ./go
+    depends_on:
+      redis:
+        condition: service_healthy
+    entrypoint: [ "go", "test", "./..." ]
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    networks:
+      - drls-net
+
   express-server:
       build:
         context: ./express
